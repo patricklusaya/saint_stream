@@ -36,7 +36,11 @@ import {
 
      FETCH_ACTORS_SUCCESS,
      FETCH_ACTORS_REQUEST,
-     FETCH_ACTORS_FAILURE
+     FETCH_ACTORS_FAILURE,
+
+     FETCH_AIRINGTODAY_REQUEST,
+     FETCH_AIRINGTODAY_SUCCESS,
+     FETCH_AIRINGTODAY_FAILURE
 
     } from "./Types";
 
@@ -349,6 +353,42 @@ export const fetchPlayingNow = () => {
       } catch (error) {
         dispatch({
           type: FETCH_ACTORS_FAILURE,
+          payload: error.message
+        });
+        console.error('Error fetching movies:', error);
+      }
+    };
+  };
+
+
+    
+  export const fetchAiringToday = () => {
+    return async (dispatch) => {
+      dispatch({ type: FETCH_AIRINGTODAY_REQUEST });
+  
+      const options = {
+        method: 'GET',
+        headers: {
+          accept: 'application/json',
+          Authorization: apiKey
+        }
+      };
+  
+      try {
+        const response = await fetch('https://api.themoviedb.org/3/tv/airing_today?language=en-US&page=1', options)
+        const data = await response.json();
+  
+        dispatch({
+          type: FETCH_AIRINGTODAY_SUCCESS,
+          payload: data.results
+        });
+
+        console.log('airing today', data.results)
+
+     
+      } catch (error) {
+        dispatch({
+          type: FETCH_AIRINGTODAY_FAILURE,
           payload: error.message
         });
         console.error('Error fetching movies:', error);

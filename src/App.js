@@ -20,7 +20,7 @@ import {
 
 // component imports
 import Main from "./components/Main";
-import { fetchCompanyLogos, fetchMovies, fetchPlayingNow, fetchPopular, fetchSeries, fetchTopRated, fetchTrending, fetchUpcoming } from "./actions/AppActions";
+import { fetchAiringToday, fetchCompanyLogos, fetchMovies, fetchPlayingNow, fetchPopular, fetchSeries, fetchTopRated, fetchTrending, fetchUpcoming } from "./actions/AppActions";
 
 
 const App = () => {
@@ -39,6 +39,7 @@ const App = () => {
     dispatch(fetchPopular())
     dispatch(fetchTrending())
     dispatch(fetchUpcoming())
+    dispatch(fetchAiringToday())
 
    
   }, []);

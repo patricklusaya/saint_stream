@@ -36,7 +36,11 @@ import {
 
     FETCH_ACTORS_SUCCESS,
     FETCH_ACTORS_REQUEST,
-    FETCH_ACTORS_FAILURE
+    FETCH_ACTORS_FAILURE,
+
+    FETCH_AIRINGTODAY_REQUEST,
+    FETCH_AIRINGTODAY_SUCCESS,
+    FETCH_AIRINGTODAY_FAILURE
 
 } from "../actions/Types";
 
@@ -51,7 +55,8 @@ const INITIAL_STATE = {
     trending:[],
     upcoming:[],
     actors:[],
-    fetchingActors:false
+    fetchingActors:false,
+    airingToday:[]
 };
 
 const AppReducer = (state = INITIAL_STATE, action) => {
@@ -78,6 +83,9 @@ const AppReducer = (state = INITIAL_STATE, action) => {
 
     case FETCH_ACTORS_SUCCESS:
         return {...state, actors:action.payload, fetchingActors:false}
+    case FETCH_AIRINGTODAY_SUCCESS:
+        return {...state, airingToday:action.payload}
+
 
     default:
       return state;

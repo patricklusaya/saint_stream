@@ -36,7 +36,7 @@ export default function AiringToday({ airingToday }) {
             <h2>{firstMovie.title}</h2>
             <p>{firstMovie.overview}</p>
             <span><span style={{color:"gold"}}>★</span> {firstMovie.vote_average.toFixed(1)} | </span>
-            <span>{new Date(firstMovie.release_date).getFullYear()}</span>
+            <span>{new Date(firstMovie.first_air_date).getFullYear()}</span>
             <button className="custom-button" onClick={() => handlePosterClick(firstMovie)} style={{ marginTop: '10px' }}>
               <FastForward size={30} />
               <span>Details</span>
@@ -64,7 +64,7 @@ export default function AiringToday({ airingToday }) {
                 </div>
                 <div className="airingToday-movie-info">
                   <h4>{movie.title}</h4>
-                  <p><strong>Release Year:</strong> {new Date(movie.release_date).getFullYear()}</p>
+                  <p><strong>Release Year:</strong> {new Date(movie.first_air_date).getFullYear()}</p>
                   <p><strong>Rating:</strong> <span style={{color:"gold"}}>★</span>{movie.vote_average.toFixed(1)} </p>
                 </div>
               </div>
@@ -90,7 +90,7 @@ export default function AiringToday({ airingToday }) {
                 </div>
                 <div className="airingToday-movie-info">
                   <h4>{movie.title}</h4>
-                  <p><strong>Release Year:</strong> {new Date(movie.release_date).getFullYear()}</p>
+                  <p><strong>Release Year:</strong> {new Date(movie.first_air_date).getFullYear()}</p>
                   <p><strong>Rating:</strong>   <span style={{color:"gold"}}>★</span>{movie.vote_average.toFixed(1)} </p>
                 </div>
               </div>

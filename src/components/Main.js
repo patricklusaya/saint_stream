@@ -41,7 +41,7 @@ export default function Main() {
   const renderTopBar = () => {
     return (
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-        <div className="navbar-logo"> <span></span> Saint<span style={{color:"#4CAF50"}}>Stream</span>  </div>
+        <div className="navbar-logo"> <NavLink to="/">  <span></span> Saint<span style={{color:"#4CAF50"}}>Stream</span></NavLink>  </div>
         <div className="navbar-links">
           <NavLink to="/">  <span>Home</span> </NavLink>
           <NavLink to="/series"><span>Films</span></NavLink>

@@ -23,6 +23,7 @@ export default function Home() {
         series: [],
         trending: [],
         upcoming: [],
+        airingToday:[],
         loading: true, 
     });
 
@@ -40,6 +41,7 @@ export default function Home() {
                 series: appState.series,
                 upcoming: appState.upcoming,
                 trending: appState.trending,
+                airingToday:appState.airingToday,
                 loading: false, 
             }));
         } catch (e) {
@@ -48,7 +50,7 @@ export default function Home() {
         }
     }, [appState]);
 
-    const { movies, companyImages, topRated, popular, nowPlaying, series, trending, upcoming, loading } = state;
+    const { movies, companyImages, topRated, popular, nowPlaying, series, trending, upcoming, loading ,airingToday} = state;
 
     // Check if any of the arrays are empty
     const isLoading = loading || 
@@ -59,7 +61,8 @@ export default function Home() {
         !nowPlaying.length || 
         !series.length || 
         !trending.length || 
-        !upcoming.length;
+        !upcoming.length ||
+        !airingToday.length;
 
     if (isLoading) {
         return (
@@ -94,7 +97,7 @@ export default function Home() {
                     <Series series={series} />
                 </Fade>
                 <Fade bottom>
-                    <AiringToday airingToday={movies} />
+                    <AiringToday airingToday={airingToday} />
                 </Fade>
             </div>
         </Slide>

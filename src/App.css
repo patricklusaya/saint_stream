@@ -1,7 +1,23 @@
+@font-face {
+  /*Myriad Set Pro Text*/
+  font-family: "ramblaRegular";
+  src: url("./assets/fonts/Rambla-Regular.ttf");
+}
+
+
+@font-face {
+  /*Myriad Set Pro Text*/
+  font-family: "ramblaBold";
+  src: url("./assets/fonts/Rambla-Bold.ttf");
+}
+
+
+
 body {
   background-color: black; /* Dark grey */
   color: white;
   margin: 0; 
+  font-family: ramblaRegular;
 
   overflow-x: hidden; 
 }
