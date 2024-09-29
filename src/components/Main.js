@@ -31,6 +31,7 @@ export default function Main() {
     return (
       <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route exact path="/saint_stream" element={<Home />} />
         <Route exact path="/series" element={<Series />} />
         <Route exact path="/movie/:id" element={<MovieDetails />} />
         <Route path="/actors" element={<Actors />} />
