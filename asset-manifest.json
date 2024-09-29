@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/saint_stream/static/css/main.c2becc18.css",
-    "main.js": "/saint_stream/static/js/main.66752dc1.js",
+    "main.js": "/saint_stream/static/js/main.b7771d6a.js",
     "static/js/453.5e11b121.chunk.js": "/saint_stream/static/js/453.5e11b121.chunk.js",
     "static/media/Rambla-Bold.ttf": "/saint_stream/static/media/Rambla-Bold.bd5f80a6c28795d44606.ttf",
     "static/media/Rambla-Regular.ttf": "/saint_stream/static/media/Rambla-Regular.2428880e0aa17d48c08c.ttf",
     "index.html": "/saint_stream/index.html",
     "main.c2becc18.css.map": "/saint_stream/static/css/main.c2becc18.css.map",
-    "main.66752dc1.js.map": "/saint_stream/static/js/main.66752dc1.js.map",
+    "main.b7771d6a.js.map": "/saint_stream/static/js/main.b7771d6a.js.map",
     "453.5e11b121.chunk.js.map": "/saint_stream/static/js/453.5e11b121.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c2becc18.css",
-    "static/js/main.66752dc1.js"
+    "static/js/main.b7771d6a.js"
   ]
 }
