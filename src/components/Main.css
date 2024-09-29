@@ -1,0 +1,174 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 20px;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: black;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.navbar-links a:hover {
+  color: #ddd;
+}
+
+.navbar-search {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  margin-top: auto;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.footer-left,
+.footer-center
+.footer-right {
+  flex-basis: 33%;
+}
+
+.footer-right{
+  margin-right: 60px;
+}
+
+.footer-about,
+.footer-privacy,
+.footer-links {
+  margin-bottom: 15px;
+}
+
+.footer-about p{
+
+  font-size: 24px;
+
+}
+
+.footer-contact {
+ 
+  display: flex;
+  padding-right: 12px;
+  gap: 10px; 
+  margin-top: 90%;
+}
+
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+}
+
+
+.footer-privacy {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+ 
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-privacy a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column; /* Stack footer-bottom elements vertically */
+    align-items: center; /* Center the footer bottom items */
+    text-align: center; /* Center text */
+  }
+
+  .footer-left {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+  .footer-right {
+
+    flex-basis: 100%;
+    margin-bottom: 20px;
+ 
+    
+  }
+  .footer-contact{
+
+    justify-content: center;
+
+  }
+  .footer-bottom {
+    flex-direction: column; /* Stack footer-bottom elements vertically */
+    align-items: center; /* Center the footer bottom items */
+    text-align: center; /* Center text */
+  }
+
+  /* .footer-links {
+    justify-content: center;
+  } */
+}
+
+.navbar-links span {
+  font-size: 19px;
+}

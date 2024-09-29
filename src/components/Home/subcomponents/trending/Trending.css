@@ -1,0 +1,164 @@
+.trending-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.trending-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 5) 100%);
+    z-index: 1;
+}
+
+.trending-scroll-wrapper {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+    z-index: 2;
+}
+
+.trending-scroll {
+    display: flex;
+    height: auto;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.trending-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.trending-featured-info {
+    color: aliceblue;
+    padding: 20px;
+    flex-shrink: 0;
+    width: 30%;
+    z-index: 2;
+}
+
+.trending-featured-info h1 {
+    color: aliceblue; 
+    font-size: 26px;
+}
+
+.trending-featured-info h2 {
+    color: aliceblue; 
+    font-size: 36px;
+}
+
+.trending-movie-bar {
+    position: relative;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.trending-movie-bar:hover {
+    transform: scale(1.05);
+    z-index: 3;
+}
+
+.trending-movie-poster {
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.trending-movie-bar:hover .trending-movie-poster {
+    opacity: 0.8;
+}
+
+.trending-movie-info {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.trending-scroll-right-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.trending-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.trending-scroll::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+    border-radius: 10px;
+}
+
+.trending-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+@media (max-width: 768px) {
+    .trending-container {
+        height: 60vh;
+    }
+
+    .trending-featured-info {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .trending-featured-info h1 {
+        font-size: 20px;
+    }
+
+    .trending-featured-info h2 {
+        font-size: 28px;
+    }
+
+    .trending-movie-bar {
+        margin: 0 5px;
+    }
+
+    .trending-movie-info {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .trending-featured-info {
+        width: 100%;
+    }
+
+    .trending-featured-info h1,
+    .trending-featured-info h2 {
+        text-align: center;
+    }
+
+    .trending-movie-bar {
+        margin: 0 2px;
+    }
+
+    .trending-movie-info {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,120 @@
+.popular-container {
+  margin: 40px;
+}
+
+.popular-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.popular-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 30px;
+  scrollbar-width: none; 
+}
+
+.popular-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.popular-movie-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 250px;
+  padding: 10px;
+}
+
+.popular-index-number {
+  font-size: 30px;
+  margin-right: 15px;
+  opacity: 0.7;
+  font-weight: bold;
+}
+
+
+.popular-poster-wrapper {
+  position: relative;
+  width: 125px;
+  height: 110px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.popular-movie-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease; 
+}
+
+.popular-poster-wrapper:hover .popular-movie-poster {
+  transform: scale(1.1); 
+}
+
+
+.poster-hover-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.popular-poster-wrapper:hover .poster-hover-btn {
+  opacity: 1; 
+}
+
+.popular-movie-info {
+  text-align: left;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.popular-movie-title {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.popular-movie-details {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.popular-release-year,
+.popular-vote-average {
+  margin-right: 10px;
+  opacity: 0.5;
+}
+
+.popular-vote-average {
+  color: gold;
+}
+
+.popular-scroll-right-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+
+.popular-scroll-right-btn:hover {
+  color: #555;
+}

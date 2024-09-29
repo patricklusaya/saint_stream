@@ -1,0 +1,96 @@
+.movie-companies-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 20px;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+.movie-companies {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    transition: transform 0.3s ease;
+}
+
+.movie-companies::-webkit-scrollbar {
+    display: none;
+}
+
+.company-logo-container {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 5px 18px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.company-logo-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.company-logo {
+    max-width: 100%;
+    height: auto;
+    width: 80px;
+    max-height: 50px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.company-logo:hover {
+    transform: scale(1.1);
+}
+
+.movie-companies-container:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .movie-companies {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        justify-items: center;
+    }
+    
+    .company-logo-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .company-logo {
+        max-width: 100%;
+        height: auto;
+    }
+}
