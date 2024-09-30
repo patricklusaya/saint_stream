@@ -17,7 +17,7 @@ export default function Series() {
                 ...prevState,
                 series: appState.series,
             }));
-            setLoading(false); // Set loading to false once data is fetched
+            setLoading(false); 
         } catch (e) {
             console.log(e);
             setLoading(false); // Handle error

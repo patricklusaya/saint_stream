@@ -24,7 +24,7 @@ const Series = ({ series }) => {
 
   return (
     <div className="movies-container">
-      <h2>Movies</h2>
+      <h2>Series</h2>
       <div className="movies-wrapper">
         <div className="movies-scroll" ref={scrollRef}>
           {series.map((movie) => (
@@ -44,7 +44,7 @@ const Series = ({ series }) => {
                 </button>
               </div>
               <div className="popular-movie-info">
-                <div className="popular-movie-title">{movie.title}</div>
+                <div className="popular-movie-title">{movie.name}</div>
                 <div className="popular-movie-details">
                   <span className="popular-vote-average">★{movie.vote_average.toFixed(1)}</span>
                   <span className="popular-release-year">
